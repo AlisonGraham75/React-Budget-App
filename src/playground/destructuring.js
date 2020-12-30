@@ -1,3 +1,5 @@
+// object destructuring
+
 const person = {
     name: 'Alison',
     age: 26,
@@ -7,11 +9,14 @@ const person = {
     }
 };
 const { name = 'Anonymous', age } = person;
-// const name = person.name;
-// const age = person.age;
 
 console.log(`${name} is ${age}.`);
 const { city, temp: temperature } = person.location;
 if(city && temperature) {
     console.log(`Its's ${temperature} in ${city}.`)
 }
+
+//Array destructuring
+const address = ['1299 S Juniper Street', 'Philadelphia', 'Pennsylvania', '19147'];
+const [, city1, state = 'New York'] = address;
+console.log(`You are in ${city1} ${state}`);
