@@ -8,6 +8,8 @@ const person = {
         temp: 92
     }
 };
+
+//curly braces used in destructuring. 
 const { name = 'Anonymous', age } = person;
 
 console.log(`${name} is ${age}.`);
